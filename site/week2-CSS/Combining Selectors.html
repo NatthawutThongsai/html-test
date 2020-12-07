@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Combining Selectors</title>
+<style>
+.highlight {
+	background-color: yellow;
+}
+p.big {
+	font-size: 20px;
+}
+p.highlight {
+	font-style: italic;
+}
+.highlight.mainpoint {
+	color: red;
+	background-color: black;
+}
+article > p {
+	color: blue;
+}
+article p {
+	color: green;
+}
+</style>
 </head>
 <body>
+<p class="big">big p.big</p>
+<p class="highlight">p.highlight</p>
+<p class="mainpoint highlight">mainpoint highlight</p>
+<article>
+	<p>p is direct child of article</p>
+	<div><p>p is in div</p></div>
+</article>
 
 </body>
 </html>
